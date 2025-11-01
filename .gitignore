@@ -62,3 +62,6 @@
 /.vs/SpaceTravelRegisterForm/CopilotIndices/17.14.1231.31060/CodeChunks.db
 /.vs/SpaceTravelRegisterForm/CopilotIndices/17.14.1231.31060/SemanticSymbols.db
 /.vs/slnx.sqlite-journal
+Backend/obj/Debug/net9.0/GroupProjectBackend.AssemblyInfo.cs
+Backend/obj/Debug/net9.0/GroupProjectBackend.AssemblyInfoInputs.cache
+Backend/obj/Debug/net9.0/GroupProjectBackend.GeneratedMSBuildEditorConfig.editorconfig
