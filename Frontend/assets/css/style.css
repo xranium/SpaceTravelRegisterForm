@@ -1,7 +1,61 @@
 @font-face {
-    font-family: orbitron;
-    src: url(../fonts/orbitron-black-webfont.woff) format(woff);
+  font-family: orbitron-black;
+  src: url(../fonts/orbitron-black-webfont.woff) format(woff);
+}
+  @font-face {
+    font-family: orbitron-bold;
     src: url(../fonts/orbitron-bold-webfont.woff) format(woff);
+  }
+  @font-face {
+    font-family: orbitron-light;
     src: url(../fonts/orbitron-light-webfont.woff) format(woff);
+  }
+  @font-face {
+    font-family: orbitron-medium;
     src: url(../fonts/orbitron-medium-webfont.woff) format(woff);
+  }
+
+* {
+  font-family: "orbitron-black", Courier, monospace;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+}
+header {
+  background: linear-gradient(to bottom, #001830, #000610);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  grid-column: 1/13;
+}
+
+section.hero {
+  grid-column: 1/13;
+  height: 70vh;
+  background-image: url(../img/hero-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+header h1 {
+  color: white;
+  animation-name: glow;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 0px #4b6cff, 0 0 0px #9d4bff;
+  }
+  to {
+    text-shadow:  0 0 12px #4b6cff, 0 0 25px #9d4bff;
+  }
 }
