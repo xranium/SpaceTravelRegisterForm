@@ -2,24 +2,32 @@
   font-family: orbitron-black;
   src: url(../fonts/orbitron-black-webfont.woff) format(woff);
 }
-  @font-face {
-    font-family: orbitron-bold;
-    src: url(../fonts/orbitron-bold-webfont.woff) format(woff);
-  }
-  @font-face {
-    font-family: orbitron-light;
-    src: url(../fonts/orbitron-light-webfont.woff) format(woff);
-  }
-  @font-face {
-    font-family: orbitron-medium;
-    src: url(../fonts/orbitron-medium-webfont.woff) format(woff);
-  }
+@font-face {
+  font-family: orbitron-bold;
+  src: url(../fonts/orbitron-bold-webfont.woff) format(woff);
+}
+@font-face {
+  font-family: orbitron-light;
+  src: url(../fonts/orbitron-light-webfont.woff) format(woff);
+}
+@font-face {
+  font-family: orbitron-medium;
+  src: url(../fonts/orbitron-medium-webfont.woff) format(woff);
+}
 
 * {
   font-family: "orbitron-black", Courier, monospace;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: white;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
 }
 body {
   display: grid;
@@ -29,22 +37,55 @@ body {
 header {
   background: linear-gradient(to bottom, #001830, #000610);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100px;
   grid-column: 1/13;
+  position: relative;
+}
+header > div > i.fa-solid {
+  color: white;
+  font-size: 40px;
+  top: 25px;
+  right: 20px;
+  position: absolute;
+  z-index: 2;
+}
+header > div > i.fa-solid:hover {
+  cursor: pointer;
+}
+.dark-bars {
+  color: #001830 !important;
 }
 
-section.hero {
-  grid-column: 1/13;
-  height: 70vh;
-  background-image: url(../img/hero-bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+header ul {
+  position: absolute;
+  top: 0;
+  padding: 40px 20px;
+  padding-right: 90px;
+  right: 0px;
+  height: 100vh;
+  z-index: 1;
 }
+header ul li {
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+header ul li a,
+i {
+  color: #001830;
+}
+.menu {
+  background-color: white;
+  display: none;
+}
+.visibility {
+  display: block;
+}
+
 header h1 {
   color: white;
+  margin-right: 100px;
   animation-name: glow;
   animation-duration: 1.8s;
   animation-timing-function: ease-in;
@@ -56,6 +97,25 @@ header h1 {
     text-shadow: 0 0 0px #4b6cff, 0 0 0px #9d4bff;
   }
   to {
-    text-shadow:  0 0 12px #4b6cff, 0 0 25px #9d4bff;
+    text-shadow: 0 0 12px #4b6cff, 0 0 25px #9d4bff;
   }
+}
+header div.button {
+  color: white;
+  width: 160px;
+  height: 50;
+  padding: 10px 10px;
+  border: solid 2px white;
+  margin-left: 40px;
+  transition: 250ms ease;
+}
+header div.button:hover {
+  box-shadow: 0 0 20px #4b6cff;
+  cursor: pointer;
+}
+
+section.hero {
+  grid-column: 1/13;
+  height: 70vh;
+  background: linear-gradient(to top, #001830, #000610);
 }
