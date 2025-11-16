@@ -5,6 +5,7 @@ function visibility() {
   } else {
     menu1.className = "menu";
   }
+  
 }
 
 function Darkbutton() {
