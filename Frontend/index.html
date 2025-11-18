@@ -3,13 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font awesome icons cdn -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="../Frontend/assets/css/style.css" />
+    <!-- Website favicon -->
     <link rel="icon" href="../Frontend/assets/img/saturn icon.ico" />
     <title>cosmic fly</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Header button -->
+      <a href=""><div class="button">Join the crew</div></a>
+      <!-- Header tittle -->
+      <h1>Lift Off to New Worlds !</h1>
+      <!-- Hamburger menu container -->
+      <div>
+        <!-- Hamburger menu icon(close/open the menu) -->
+        <i
+          class="fa-solid fa-bars"
+          id="bars"
+          onclick="visibility() ; Darkbutton()"
+          ;
+        ></i>
+        <!-- Side menu(Hidden by default) -->
+        <ul class="menu" id="show">
+          <li>
+            <a href=""><i class="fa-solid fa-shuttle-space"></i> launch pad</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-satellite"></i> missions</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-wpexplorer"></i> explore</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-user"></i> crew members</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- Hero section -->
+    <section class="hero"></section>
+  </body>
+  <!-- Main javascript file -->
+  <script src="../Frontend/assets/js/main.js"></script>
 </html>

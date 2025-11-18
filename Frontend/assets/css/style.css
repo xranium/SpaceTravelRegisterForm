@@ -1,7 +1,154 @@
+/* --------------Font imports------------- */
+/* Load different weights of Orbitron font */
 @font-face {
-    font-family: orbitron;
-    src: url(../fonts/orbitron-black-webfont.woff) format(woff);
-    src: url(../fonts/orbitron-bold-webfont.woff) format(woff);
-    src: url(../fonts/orbitron-light-webfont.woff) format(woff);
-    src: url(../fonts/orbitron-medium-webfont.woff) format(woff);
+  font-family: orbitron-black;
+  src: url(../fonts/orbitron-black-webfont.woff) format(woff);
+}
+@font-face {
+  font-family: orbitron-bold;
+  src: url(../fonts/orbitron-bold-webfont.woff) format(woff);
+}
+@font-face {
+  font-family: orbitron-light;
+  src: url(../fonts/orbitron-light-webfont.woff) format(woff);
+}
+@font-face {
+  font-family: orbitron-medium;
+  src: url(../fonts/orbitron-medium-webfont.woff) format(woff);
+}
+/* ------------------Global style--------------- */
+/* Reset and default things */
+* {
+  font-family: "orbitron-black", Courier, monospace;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+/* Remove default bullets at ul li */
+ul,
+li {
+  list-style: none;
+}
+/* Remove default underline for links */
+a {
+  text-decoration: none;
+}
+/* Main layout grid */
+body {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+}
+/* -----------------Header----------------- */
+header {
+  background: linear-gradient(to bottom, #001830, #000610);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  grid-column: 1/13;
+  position: relative;
+}
+/* Hamburger menu icon */
+header > div > i.fa-solid {
+  color: white;
+  font-size: 40px;
+  top: 25px;
+  right: 20px;
+  position: absolute;
+  z-index: 2;
+  transition: 250ms ease;
+}
+header > div > i.fa-solid:hover {
+  cursor: pointer;
+  text-shadow: 0 0 20px #4b6cff;
+}
+/* Icon color when opening menu overriding */
+.dark-bars {
+  color: #001830 !important;
+}
+/* Hamburger menu container */
+header ul {
+  position: absolute;
+  top: 0;
+  padding: 40px 20px;
+  padding-right: 90px;
+  right: 0px;
+  height: 100vh;
+  z-index: 1;
+}
+header ul li {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  transition: 250ms ease;
+}
+header ul li:hover {
+  text-shadow: 0 0 20px #4b6cff;
+  border-bottom: solid 1px #4b6cff;
+}
+header ul li a,
+i {
+  color: #001830;
+}
+/* Hide menu */
+.menu {
+  background-color: white;
+  display: none;
+}
+/* adding visibility class for menu opening */
+.visibility {
+  display: block;
+  animation: MenuOpen 650ms ease forwards;
+}
+/* Menu opening animation */
+@keyframes MenuOpen {
+  from {
+    opacity: 0;
+    scale: 1.1;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* Header tittle */
+header h1 {
+  color: white;
+  margin-right: 100px;
+  animation-name: glow;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+/* Header tittle glowing animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 0px #4b6cff, 0 0 0px #9d4bff;
+  }
+  to {
+    text-shadow: 0 0 12px #4b6cff, 0 0 25px #9d4bff;
+  }
+}
+/* Header button */
+header div.button {
+  color: white;
+  width: 160px;
+  height: 50;
+  padding: 10px 10px;
+  border: solid 2px white;
+  margin-left: 40px;
+  transition: 250ms ease;
+}
+header div.button:hover {
+  box-shadow: 0 0 20px #4b6cff;
+  cursor: pointer;
+}
+/* -----------------Hero section-------------------- */
+section.hero {
+  grid-column: 1/13;
+  height: 70vh;
+  background: linear-gradient(to top, #001830, #000610);
 }
