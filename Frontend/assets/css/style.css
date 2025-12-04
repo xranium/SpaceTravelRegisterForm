@@ -175,7 +175,7 @@ div.galaxy-button {
 div.galaxy-button:hover {
   box-shadow: 0 0 20px #4b6cff;
 }
-/* a white class for arrow icon in button */
+/* a w hite class for arrow icon in button */
 .white {
   color: white;
 }
@@ -303,5 +303,23 @@ main div.child6{
 main > div > div >a> img{
   max-width: 500px;
   border-radius: 40px;
-  border: 2px solid white;
+  border: 1px solid white;
+  transition: 250ms ease;
+}
+main > div > div >a> img:hover{
+  box-shadow: 0 0 20px #4b6cff;
+  animation: card-scale 1.2s ease forwards ; 
+}
+@keyframes card-scale {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1);
+  }
+
+  
 }
