@@ -16,3 +16,19 @@ function Darkbutton() {
     bars.className = "fa-solid fa-bars";
   }
 }
+document.getElementById("question").addEventListener("submit" , function(e){
+  e.preventDefault();
+
+  const anwser = document.querySelector('input[name="quiz"]:checked');
+  if (anwser){
+    if (anwser.value === "Venus"){
+      alert("Correct! Venus rotates in the opposite direction.")
+    }else{
+      alert("Wrong answer. Try again !")
+    }
+  }else{
+    alert("Please select an option !")
+  }
+
+
+})
