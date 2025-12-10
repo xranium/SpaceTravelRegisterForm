@@ -365,7 +365,7 @@ main > section.quick-read {
   background: linear-gradient(to top, #001830, #000610);
   height: auto;
   border-radius: 20px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 main > section.quick-read > div.son1 {
   flex: 50%;
@@ -433,6 +433,111 @@ input.anwser {
   transition: 250ms ease;
 }
 input.anwser:hover {
+  box-shadow: 0 0 20px #4b6cff;
+  cursor: pointer;
+}
+main > section.accordion-menu {
+  font-family: "orbitron-medium";
+  font-size: 20px;
+  grid-column: 1/9;
+  margin-left: 20px;
+  height: auto;
+  background: linear-gradient(to top, #001830, #000610);
+  border-radius: 20px;
+}
+.accordion-menu div.tab label::after {
+  content: "\276f";
+  font-size: 20px;
+  margin-left: 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.accordion-menu input[type="checkbox"] {
+  display: none;
+}
+.accordion-menu div.tab input[type="checkbox"]:checked ~ div.sub-menu {
+  height: auto;
+  margin-top: 20px;
+}
+.accordion-menu div.tab {
+  overflow: hidden;
+  margin: 15px 15px;
+  padding: 15px 10px;
+  border-radius: 20px;
+}
+div.sub-menu {
+  overflow: hidden;
+  height: 0;
+  transition: 0.5s ease;
+}
+.accordion-menu div.tab input[type="checkbox"]:checked + label::after {
+  transform: rotate(90deg);
+}
+.bg-blue {
+  background-color: #01152a;
+}
+.white-font {
+  color: white;
+}
+section.accordion-menu h5 {
+  font-family: "orbitron-black";
+  margin: 20px 20px;
+  font-size: 30px;
+}
+main > section.question {
+  grid-column: 9/13;
+  background: linear-gradient(to top, #001830, #000610);
+  height: 400px;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+section.question form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+section.question h5 {
+  font-size: 20px;
+  margin: 0 auto;
+}
+section.question input:not([type="submit"]) {
+  display: block;
+  font-size: 25px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: #010d1c;
+  border: none;
+  border-bottom: white 2px solid;
+  font-family: "orbitron-medium";
+  transition: 250ms ease;
+}
+section.question input:not([type="submit"]):focus {
+  outline: none;
+  box-shadow: 0 8px 30px -5px #4b6cff;
+}
+section.question input:not([type="submit"])::placeholder {
+  color: white;
+  font-size: 20px;
+}
+section.question input[type="email"] {
+  background-color: #011124;
+}
+section.question input[type="submit"] {
+  font-size: 25px;
+  margin: 0 auto;
+  color: white;
+  background-color: #01152a;
+  border: white 2px solid;
+  padding: 10px 15px;
+  font-family: "orbitron-medium";
+  transition: 0.25s ease;
+}
+section.question input[type="submit"]:hover {
   box-shadow: 0 0 20px #4b6cff;
   cursor: pointer;
 }
